@@ -1,5 +1,6 @@
 ---
 title: "Welcome to Next.js blog!"
+featuredImage:
 ---
 
 **Hello world**, this is my first Next.js blog post and it is written in Markdown.

@@ -9,6 +9,7 @@ export default function PostLayout(props) {
                 <title>{props.title}</title>
             </Head>
             <article>
+                {props.image && <img src={props.image} />}
                 <h1>{props.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: props.content }} />
                 <div>
