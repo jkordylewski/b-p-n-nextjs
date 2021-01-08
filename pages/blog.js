@@ -1,6 +1,9 @@
 import DefaultLayout from "@layouts/default";
 import Link from "next/link";
 import { getConfig, getAllPosts } from "@api";
+import links from "../data/links.json";
+import places from "../data/places.json";
+import tools from "../data/tools.json";
 
 export default function Blog(props) {
     return (
@@ -8,6 +11,39 @@ export default function Blog(props) {
             <p>List of posts:</p>
             <ul>
                 {props.posts.map(function (post, idx) {
+                    return (
+                        <li key={idx}>
+                            <Link href={"/posts/" + post.slug}>
+                                <a>{post.title}</a>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
+            <ul>
+                {links.map(function (post, idx) {
+                    return (
+                        <li key={idx}>
+                            <Link href={"/posts/" + post.slug}>
+                                <a>{post.title}</a>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
+            <ul>
+                {places.map(function (post, idx) {
+                    return (
+                        <li key={idx}>
+                            <Link href={"/posts/" + post.slug}>
+                                <a>{post.title}</a>
+                            </Link>
+                        </li>
+                    );
+                })}
+            </ul>
+            <ul>
+                {tools.map(function (post, idx) {
                     return (
                         <li key={idx}>
                             <Link href={"/posts/" + post.slug}>
